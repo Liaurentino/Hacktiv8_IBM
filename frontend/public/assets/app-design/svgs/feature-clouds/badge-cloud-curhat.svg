@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Soft Cloud Base -->
+  <circle cx="50" cy="50" r="46" fill="#EDE8FE" stroke="#DDD6FE" stroke-width="2"/>
+  <!-- Chat Bubble -->
+  <path d="M68 54C68 57.5 65 60 61.5 60H38L30 68V34C30 30.5 33 28 36.5 28H61.5C65 28 68 30.5 68 34V54Z" fill="#4F46E5"/>
+  <!-- Eyes -->
+  <circle cx="44" cy="42" r="3" fill="#FFFFFF"/>
+  <circle cx="54" cy="42" r="3" fill="#FFFFFF"/>
+  <!-- Cute Smile -->
+  <path d="M46 48Q49 51 52 48" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Gold Sparkle -->
+  <path d="M66 22L68 27L73 29L68 31L66 36L64 31L59 29L64 27L66 22Z" fill="#FCD34D"/>
+</svg>

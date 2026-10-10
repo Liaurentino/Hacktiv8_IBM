@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Stem -->
+  <path d="M50 85V35" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Florets -->
+  <ellipse cx="50" cy="24" rx="4" ry="7" fill="#8B5CF6"/>
+  <ellipse cx="44" cy="33" rx="5" ry="4" fill="#A78BFA"/>
+  <ellipse cx="56" cy="33" rx="5" ry="4" fill="#A78BFA"/>
+  <ellipse cx="43" cy="42" rx="5.5" ry="4" fill="#8B5CF6"/>
+  <ellipse cx="57" cy="42" rx="5.5" ry="4" fill="#8B5CF6"/>
+  <ellipse cx="44" cy="51" rx="5" ry="4" fill="#A78BFA"/>
+  <ellipse cx="56" cy="51" rx="5" ry="4" fill="#A78BFA"/>
+  <!-- Leaves -->
+  <path d="M50 68Q40 64 36 58" stroke="#15803D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M50 62Q60 58 64 52" stroke="#15803D" stroke-width="2" stroke-linecap="round"/>
+</svg>

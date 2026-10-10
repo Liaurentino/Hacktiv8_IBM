@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#FFF1F2" stroke="#FECDD3" stroke-width="2"/>
+  <!-- Open Book -->
+  <path d="M18 64C28 60 42 61 50 66C58 61 72 60 82 64V28C72 24 58 25 50 30C42 25 28 24 18 28V64Z" fill="#FFFFFF" stroke="#BE123C" stroke-width="3"/>
+  <line x1="50" y1="30" x2="50" y2="66" stroke="#BE123C" stroke-width="3"/>
+  <!-- Text lines -->
+  <line x1="26" y1="36" x2="42" y2="38" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="44" x2="42" y2="46" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+  <line x1="58" y1="38" x2="74" y2="36" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+  <line x1="58" y1="46" x2="74" y2="44" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+  <!-- Golden ribbon -->
+  <path d="M50 30V48L46 44L42 48V30" fill="#F59E0B"/>
+</svg>

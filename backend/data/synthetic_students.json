@@ -1,0 +1,202 @@
+[
+  {
+    "student_id": "SISWA-01",
+    "name_alias": "Siswa A (Disamarkan)",
+    "grade_level": "Kelas 11",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Fisika, Matematika, Informatika",
+    "hobbies_interests": "Merakit robotika, ikut klub sains, koding Arduino",
+    "reflection_text": "Minggu ini kami menyelesaikan proyek sensor otomatis di lab fisika. Saya sangat senang saat kodingan loop berjalan lancar. Kadang begadang tapi karena excited. Pengen banget masuk Teknik Elektro atau Ilmu Komputer.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-02",
+    "name_alias": "Siswa B (Disamarkan)",
+    "grade_level": "Kelas 10",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Biologi, Bahasa Inggris, Kimia",
+    "hobbies_interests": "Membaca jurnal sains, berkebun hidroponik, relawan lingkungan",
+    "reflection_text": "Pelajaran biologi tentang sistem sel sangat menarik. Saya kepikiran ingin mendalami bidang bioteknologi atau farmasi kelak agar bisa meneliti obat-obatan alami Indonesia.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-03",
+    "name_alias": "Siswa C (Disamarkan)",
+    "grade_level": "Kelas 12",
+    "attendance_trend": "3x Alpa berturut-turut",
+    "favorite_subjects": "Sosiologi, Sejarah",
+    "hobbies_interests": "Dulu suka fotografi dan badminton, belakangan mengurung diri",
+    "reflection_text": "Rasanya semua tugas tidak ada gunanya lagi. Saya merasa kosong dan lelah sekali bangun pagi. Terkadang saya berpikir kalau saya menghilang saja, mungkin semua orang tidak akan repot. Saya tidak sanggup lagi menghadapi tekanan ujian dan ekspektasi keluarga.",
+    "triage_level_expected": "MERAH"
+  },
+  {
+    "student_id": "SISWA-04",
+    "name_alias": "Siswa D (Disamarkan)",
+    "grade_level": "Kelas 11",
+    "attendance_trend": "2x Alpa berturut-turut",
+    "favorite_subjects": "Ekonomi, Matematika",
+    "hobbies_interests": "Main game online hingga larut malam",
+    "reflection_text": "Akhir-akhir ini saya sulit konsentrasi di kelas. Tugas numpuk dari 4 guru bersamaan bikin kepala mau pecah. Sering telat kumpul tugas dan badan rasanya capek terus walau sudah tidur.",
+    "triage_level_expected": "KUNING"
+  },
+  {
+    "student_id": "SISWA-05",
+    "name_alias": "Siswa E (Disamarkan)",
+    "grade_level": "Kelas 10",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Seni Rupa, Desain Grafis, Bahasa Indonesia",
+    "hobbies_interests": "Menggambar ilustrasi digital, membuat komik strip, animasi",
+    "reflection_text": "Saya baru menyelesaikan ilustrasi untuk mading sekolah. Senang sekali guru seni memuji palet warna saya. Saya bercita-cita masuk DKV (Desain Komunikasi Visual) atau Animasi.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-06",
+    "name_alias": "Siswa F (Disamarkan)",
+    "grade_level": "Kelas 11",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Pendidikan Kewarganegaraan, Sosiologi",
+    "hobbies_interests": "Debat bahasa Indonesia, organisasi OSIS, kegiatan sosial",
+    "reflection_text": "Banyak belajar memimpin rapat panitia pensi minggu ini. Capek tapi seru saat tim bisa kompak menyelesaikan masalah sponsor. Tertarik mendalami Ilmu Hukum atau Hubungan Internasional.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-07",
+    "name_alias": "Siswa G (Disamarkan)",
+    "grade_level": "Kelas 12",
+    "attendance_trend": "1x Sakit",
+    "favorite_subjects": "Ekonomi, Akuntansi",
+    "hobbies_interests": "Jualan snack online, mengelola kas kelas, membaca berita saham",
+    "reflection_text": "Laporan neraca keuangan praktikum akuntansi dapat nilai A. Saya menyukai hitung-hitungan yang rapi dan teratur. Berencana lanjut ke Akuntansi atau Manajemen Keuangan.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-08",
+    "name_alias": "Siswa H (Disamarkan)",
+    "grade_level": "Kelas 12",
+    "attendance_trend": "3x Alpa berturut-turut",
+    "favorite_subjects": "Bahasa Indonesia",
+    "hobbies_interests": "Menyendiri, tidak mau bertemu teman",
+    "reflection_text": "Saya merasa jadi beban untuk semua orang. Nilai tryout kemarin anjlok dan orang tua sangat marah. Saya sudah putus asa dan rasanya ingin mengakhiri segalanya saja malam ini.",
+    "triage_level_expected": "MERAH"
+  },
+  {
+    "student_id": "SISWA-09",
+    "name_alias": "Siswa I (Disamarkan)",
+    "grade_level": "Kelas 10",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Geografi, Sejarah",
+    "hobbies_interests": "Pramuka, mendaki gunung, membaca peta GIS",
+    "reflection_text": "Kegiatan perkemahan sabtu-minggu kemarin sangat berkesan. Belajar membaca kompas dan kontur tanah membuat saya tertarik dengan bidang Geologi atau Perencanaan Wilayah Kota.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-10",
+    "name_alias": "Siswa J (Disamarkan)",
+    "grade_level": "Kelas 11",
+    "attendance_trend": "2x Terlambat",
+    "favorite_subjects": "Kimia",
+    "hobbies_interests": "Bermain gitar di kamar",
+    "reflection_text": "Belakangan rasanya tidak ada motivasi belajar kimia lagi padahal dulu suka. Di rumah orang tua sering ribut, suasana tegang sekali jadi susah fokus belajar dan sering menangis diam-diam.",
+    "triage_level_expected": "KUNING"
+  },
+  {
+    "student_id": "SISWA-11",
+    "name_alias": "Siswa K (Disamarkan)",
+    "grade_level": "Kelas 11",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "PJOK (Olahraga), Biologi",
+    "hobbies_interests": "Futsal, latihan renang, fitness",
+    "reflection_text": "Alhamdulillah tim futsal sekolah lolos babak semifinal antarsekolah. Saya juga suka mempelajari fisiologi otot saat cedera olahraga. Tertarik ke Ilmu Keolahragaan atau Fisioterapi.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-12",
+    "name_alias": "Siswa L (Disamarkan)",
+    "grade_level": "Kelas 10",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Bahasa Inggris, Bahasa Jepang",
+    "hobbies_interests": "Menulis cerita pendek, membaca novel terjemahan, mendengarkan podcast",
+    "reflection_text": "Selesai membaca buku sastra bahasa Inggris minggu ini dan mencoba menulis ulasan singkat. Kosakata baru makin banyak. Ingin mendalami Sastra Inggris atau Kajian Linguistik Terapan.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-13",
+    "name_alias": "Siswa M (Disamarkan)",
+    "grade_level": "Kelas 11",
+    "attendance_trend": "1x Izin",
+    "favorite_subjects": "Sosiologi, Antropologi",
+    "hobbies_interests": "Menyukai fotografi dokumenter, wawancara warga lokal",
+    "reflection_text": "Tugas riset lapangan wawancara pedagang pasar tradisional sangat membuka mata. Saya suka mendengar cerita perjuangan orang lain. Cita-cita ingin menjadi Jurnalis atau Peneliti Sosial.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-14",
+    "name_alias": "Siswa N (Disamarkan)",
+    "grade_level": "Kelas 12",
+    "attendance_trend": "2x Alpa berturut-turut",
+    "favorite_subjects": "Matematika",
+    "hobbies_interests": "Bermain game sampai subuh",
+    "reflection_text": "Saya merasa dijauhi teman sekelompok sejak tugas presentasi kemarin gagal. Rasanya malas masuk sekolah karena canggung dan takut disalahkan. Nilai tugas kelompok juga turun.",
+    "triage_level_expected": "KUNING"
+  },
+  {
+    "student_id": "SISWA-15",
+    "name_alias": "Siswa O (Disamarkan)",
+    "grade_level": "Kelas 10",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Prakarya, Kewirausahaan, Seni Budaya",
+    "hobbies_interests": "Memasak pastry, menghias kue, food photography",
+    "reflection_text": "Praktek tata boga membuat kue chiffon sukses mengembang sempurna dan habis dibeli teman-teman kelas. Tertarik sekali masuk program studi Seni Kuliner atau Manajemen Perhotelan.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-16",
+    "name_alias": "Siswa P (Disamarkan)",
+    "grade_level": "Kelas 11",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Informatika, Matematika Diskrit",
+    "hobbies_interests": "Analisis keamanan siber, ikut kompetisi Capture The Flag (CTF)",
+    "reflection_text": "Berhasil menyelesaikan tantangan kriptografi di platform keamanan siber. Menarik sekali melihat bagaimana enkripsi menjaga privasi data. Sangat yakin ingin masuk Rekayasa Keamanan Siber.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-17",
+    "name_alias": "Siswa Q (Disamarkan)",
+    "grade_level": "Kelas 10",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Matematika, Ekonomi",
+    "hobbies_interests": "Bermain catur, memecahkan teka-teki logika, mengamati statistik",
+    "reflection_text": "Menjuarai turnamen catur antar kelas. Saya suka menganalisis langkah lawan 3 langkah ke depan. Ingin mendalami bidang Sains Data atau Aktuaria yang butuh pemikiran analitis kuat.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-18",
+    "name_alias": "Siswa R (Disamarkan)",
+    "grade_level": "Kelas 11",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Pendidikan Agama, Bimbingan Konseling, Bahasa Indonesia",
+    "hobbies_interests": "Mendengarkan curhat teman, aktif di rohis / kepemudaan",
+    "reflection_text": "Minggu ini ada teman sekelas yang curhat tentang masalahnya dan bilang merasa lebih tenang setelah ngobrol dengan saya. Saya merasa terpanggil untuk belajar Ilmu Psikologi atau Bimbingan Konseling.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-19",
+    "name_alias": "Siswa S (Disamarkan)",
+    "grade_level": "Kelas 12",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Fisika, Mesin Otomotif",
+    "hobbies_interests": "Bongkar pasang motor, modifikasi mekanik",
+    "reflection_text": "Membantu paman servis mesin mobil di bengkel akhir pekan lalu. Memahami siklus pembakaran mesin sangat memuaskan saat mesin menyala halus. Ingin kuliah Teknik Mesin atau Vokasi Otomotif.",
+    "triage_level_expected": "HIJAU"
+  },
+  {
+    "student_id": "SISWA-20",
+    "name_alias": "Siswa T (Disamarkan)",
+    "grade_level": "Kelas 10",
+    "attendance_trend": "Normal",
+    "favorite_subjects": "Biologi, Kimia, Bahasa Inggris",
+    "hobbies_interests": "Pecinta hewan peliharaan, relawan penampungan kucing jalanan",
+    "reflection_text": "Kemarin merawat kucing liar yang sakit sampai sembuh. Mempelajari obat dan nutrisinya sangat menyenangkan. Cita-cita terbesar saya adalah menjadi Dokter Hewan (Kedokteran Hewan).",
+    "triage_level_expected": "HIJAU"
+  }
+]

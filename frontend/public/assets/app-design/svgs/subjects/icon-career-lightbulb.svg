@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2"/>
+  <!-- Bulb Glass -->
+  <path d="M50 18C36 18 26 28 26 42C26 51 32 58 36 64H64C68 58 74 51 74 42C74 28 64 18 50 18Z" fill="#FEF08A" stroke="#D97706" stroke-width="3"/>
+  <!-- Base Thread -->
+  <rect x="40" y="67" width="20" height="4" rx="2" fill="#94A3B8"/>
+  <rect x="42" y="73" width="16" height="4" rx="2" fill="#64748B"/>
+  <path d="M44 79Q50 83 56 79" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+  <!-- Filament -->
+  <path d="M44 46L48 36L52 46L56 36" stroke="#D97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Radiance Rays -->
+  <line x1="50" y1="10" x2="50" y2="14" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="20" y1="28" x2="24" y2="31" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="28" x2="76" y2="31" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

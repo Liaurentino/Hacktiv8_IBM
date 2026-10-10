@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Star 1 (Lilac) -->
+  <path d="M50 18L53 34L69 37L53 40L50 56L47 40L31 37L47 34L50 18Z" fill="#A9A8F5"/>
+  <!-- Star 2 -->
+  <path d="M75 52L77 60L85 62L77 64L75 72L73 64L65 62L73 60L75 52Z" fill="#C4B5FD"/>
+  <!-- Star 3 -->
+  <path d="M28 58L29.5 64L36 65.5L29.5 67L28 73L26.5 67L20 65.5L26.5 64L28 58Z" fill="#DDD6FE"/>
+</svg>

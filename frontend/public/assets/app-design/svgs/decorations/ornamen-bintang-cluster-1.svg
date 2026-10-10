@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Star 1 (Large Gold) -->
+  <path d="M45 15L48 32L65 35L48 38L45 55L42 38L25 35L42 32L45 15Z" fill="#FCD34D"/>
+  <circle cx="45" cy="35" r="3" fill="#FFFBEB"/>
+  <!-- Star 2 (Medium) -->
+  <path d="M72 45L74 54L83 56L74 58L72 67L70 58L61 56L70 54L72 45Z" fill="#FDE68A"/>
+  <!-- Star 3 (Small) -->
+  <path d="M26 60L27.5 66L34 67.5L27.5 69L26 75L24.5 69L18 67.5L24.5 66L26 60Z" fill="#FCD34D"/>
+</svg>

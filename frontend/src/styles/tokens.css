@@ -1,0 +1,81 @@
+:root {
+  /* ── Core Celestial Brand ── */
+  --luna-navy:          #2F3366;  /* Primary brand, headings, topbar dark, borders */
+  --luna-navy-deep:     #23214A;  /* Text utama, sidebar dark, modal header */
+  --luna-lavender:      #7C69EF;  /* Interactive accent, active pill, primary buttons */
+  --luna-lavender-soft: #A9A8F5;  /* Secondary accent, glow highlight */
+  --luna-lavender-lt:   #F4F1FE;  /* Active menu background, light badge, subtle hover */
+  --luna-lavender-mist: #ECE9FD;  /* Container background, role badge */
+  --luna-cream:         #FFE7B8;  /* Optimism card, moon badge, highlight star */
+  --luna-pink:          #FFD4E5;  /* Empati, bimbingan personal, card curhat */
+  --luna-mint:          #C8F7DC;  /* Status stabil, badge positif, toggle online */
+
+  /* ── Netral & Background Kanvas ── */
+  --bg-page:            #F4F3FB;  /* Background utama portal (soft lavender canvas) */
+  --bg-card:            #FFFFFF;  /* Background kartu & modal */
+  --surface:            #FFFFFF;
+  --canvas:             #F4F3FB;
+  --border:             #E8E5F7;
+  --border-card:        #E8E5F7;  /* Border kartu utama */
+  --border-card-hover:  #C9C3F2;  /* Border kartu saat hover */
+  --border-divider:     #EAE6FA;  /* Garis pemisah konten */
+
+  /* ── Tipografi Netral ── */
+  --text-dark:          #23214A;  /* Teks utama (High contrast, WCAG AAA) */
+  --text:               #23214A;
+  --text-body:          #484179;  /* Teks isi / paragraf */
+  --text-muted:         #6E6D8A;  /* Label sekunder, timestamp, sub-keterangan */
+  --text-subtle:        #9493B0;  /* Placeholder, disabled text */
+
+  /* ── Early Warning Triage (Konseling Guru BK) ── */
+  --triage-green-bg:    #F0FDF4;  --triage-green-border: #BBF7D0;  --triage-green-text: #166534;
+  --triage-yellow-bg:   #FFFBEB;  --triage-yellow-border: #FDE68A;  --triage-yellow-text: #92400E;
+  --triage-red-bg:      #FEF2F2;  --triage-red-border:   #FECACA;  --triage-red-text:   #991B1B;
+  --triage-black-bg:    #181926;  --triage-black-border: #DC2626;  --triage-black-text: #FFFFFF;
+
+  --flag-green-bg:      #F0FDF4;
+  --flag-yellow-bg:     #FFFBEB;
+  --flag-red-bg:        #FEF2F2;
+  --flag-black-bg:      #181926;
+
+  /* ── Skala Nilai Akademik (P1-P14 & UTS) ── */
+  --grade-a-bg:         #DCFCE7;  --grade-a-text: #166534;  /* Nilai ≥ 90 */
+  --grade-b-bg:         #DBEAFE;  --grade-b-text: #1D4ED8;  /* Nilai 80 - 89.9 */
+  --grade-c-bg:         #FEF9C3;  --grade-c-text: #854D0E;  /* Nilai 70 - 79.9 (KKM) */
+  --grade-d-bg:         #FED7AA;  --grade-d-text: #9A3412;  /* Nilai 60 - 69.9 */
+  --grade-e-bg:         #FEE2E2;  --grade-e-text: #991B1B;  /* Nilai < 60 */
+  --grade-x-bg:         #1E293B;  --grade-x-text: #FFFFFF;  /* Alpa / Tunda */
+
+  /* ── Radius & Elevasi ── */
+  --radius-pill:        999px;    /* Button pill, status chip */
+  --radius-card:        16px;     /* Kartu dashboard, widget */
+  --radius-modal:       20px;     /* Dialog modal */
+  --radius-control:     8px;
+  --radius-input:       10px;     /* Input form, select */
+  --shadow-sm:          0 1px 3px rgba(47, 51, 102, 0.05);
+  --shadow-card:        0 4px 20px rgba(108, 93, 211, 0.05);
+  --shadow-card-hover:  0 10px 28px rgba(108, 93, 211, 0.10);
+  --shadow-modal:       0 25px 50px -12px rgba(35, 33, 74, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--text-dark);
+  background: var(--bg-page);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'cv02' 1, 'cv03' 1, 'cv04' 1, 'cv11' 1, 'tnum' 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, button, .font-heading {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+
+table, td, th, .num-tabular {
+  font-feature-settings: 'tnum' 1, 'cv02' 1, 'cv03' 1;
+}

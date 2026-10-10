@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Open Book Base -->
+  <path d="M14 74C26 70 38 71 50 76C62 71 74 70 86 74V58C74 54 62 55 50 60C38 55 26 54 14 58V74Z" fill="#FFFFFF" stroke="#4338CA" stroke-width="2.5"/>
+  <!-- Sleeping Cat Curled -->
+  <ellipse cx="50" cy="50" rx="18" ry="12" fill="#FDBA74"/>
+  <circle cx="40" cy="46" r="9" fill="#FB923C"/>
+  <!-- Ears -->
+  <polygon points="34,40 37,33 42,39" fill="#EA580C"/>
+  <polygon points="41,40 46,34 49,41" fill="#EA580C"/>
+  <!-- Closed sleepy eyes -->
+  <path d="M36 47Q38 49 40 47" stroke="#7C2D12" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Curved tail -->
+  <path d="M64 52C68 50 70 44 67 42" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+  <!-- Floating Z's -->
+  <text x="64" y="34" font-family="Arial" font-weight="bold" font-size="9" fill="#818CF8">z</text>
+  <text x="71" y="27" font-family="Arial" font-weight="bold" font-size="12" fill="#6366F1">Z</text>
+</svg>

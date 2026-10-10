@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Outer Neural Ring -->
+  <circle cx="50" cy="50" r="44" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="2"/>
+  <!-- Hexagon Granite Core -->
+  <polygon points="50,22 74,35 74,65 50,78 26,65 26,35" fill="#312E81"/>
+  <!-- Inner Neural Core -->
+  <polygon points="50,30 66,39 66,61 50,70 34,61 34,39" fill="#4338CA"/>
+  <!-- AI Spark -->
+  <path d="M50 38L52.5 46.5L61 49L52.5 51.5L50 60L47.5 51.5L39 49L47.5 46.5L50 38Z" fill="#FCD34D"/>
+  <!-- Connecting Nodes -->
+  <circle cx="50" cy="18" r="3" fill="#6366F1"/>
+  <circle cx="78" cy="34" r="3" fill="#6366F1"/>
+  <circle cx="78" cy="66" r="3" fill="#6366F1"/>
+  <circle cx="50" cy="82" r="3" fill="#6366F1"/>
+  <circle cx="22" cy="66" r="3" fill="#6366F1"/>
+  <circle cx="22" cy="34" r="3" fill="#6366F1"/>
+  <line x1="50" y1="21" x2="50" y2="26" stroke="#818CF8" stroke-width="2"/>
+  <line x1="75" y1="35" x2="71" y2="37" stroke="#818CF8" stroke-width="2"/>
+  <line x1="75" y1="65" x2="71" y2="63" stroke="#818CF8" stroke-width="2"/>
+  <line x1="50" y1="79" x2="50" y2="74" stroke="#818CF8" stroke-width="2"/>
+  <line x1="25" y1="65" x2="29" y2="63" stroke="#818CF8" stroke-width="2"/>
+  <line x1="25" y1="35" x2="29" y2="37" stroke="#818CF8" stroke-width="2"/>
+</svg>

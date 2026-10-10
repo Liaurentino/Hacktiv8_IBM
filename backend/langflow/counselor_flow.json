@@ -1,0 +1,89 @@
+{
+  "name": "AI Agent Konselor BK (Langflow + LUNA Agent MCP)",
+  "description": "Orkestrasi alur visual Langflow untuk sanitasi privasi siswa, pencegahan krisis darurat, dan eksekusi tool LUNA Agent via Model Context Protocol (MCP).",
+  "version": "1.0.0",
+  "data": {
+    "nodes": [
+      {
+        "id": "node_input_ingestion",
+        "type": "customComponent",
+        "data": {
+          "name": "StudentJournalIngestion",
+          "description": "Menerima input catatan refleksi mingguan siswa, data tren kehadiran, dan hobi.",
+          "inputs": {
+            "student_id": "SISWA-A01",
+            "grade_level": "Kelas 11",
+            "reflection_text": "Teks refleksi mingguan",
+            "attendance_trend": "Normal"
+          }
+        },
+        "position": { "x": 100, "y": 200 }
+      },
+      {
+        "id": "node_privacy_masker",
+        "type": "customComponent",
+        "data": {
+          "name": "PrivacyMaskerNode",
+          "description": "Mendeteksi & menyamarkan data pribadi PII (Nama, No Telepon, NISN, Email) sesuai UU PDP No. 27/2022.",
+          "tool_call": "mask_student_pii",
+          "protocol": "FastMCP"
+        },
+        "position": { "x": 380, "y": 200 }
+      },
+      {
+        "id": "node_guardrail_crisis",
+        "type": "customComponent",
+        "data": {
+          "name": "SafetyGuardrailInterceptor",
+          "description": "Evaluasi risiko krisis darurat (self-harm/hopelessness akut). Jika terdeteksi, memblokir kesimpulan otomatis dan mengarahkan ke Hotline Kemenkes 119 ext 8.",
+          "keywords_count": 10,
+          "emergency_escalation_protocol": "Hotline 119 ext 8"
+        },
+        "position": { "x": 660, "y": 200 }
+      },
+      {
+        "id": "node_luna_agent_mcp",
+        "type": "mcpClientComponent",
+        "data": {
+          "name": "LunaAgenticEngine",
+          "description": "Klien Model Context Protocol (MCP) yang memanggil tool penalaran kognitif LUNA Agent.",
+          "tools": [
+            "classify_student_wellbeing_risk",
+            "map_riasec_career_interest",
+            "generate_counseling_brief"
+          ],
+          "endpoint": "http://localhost:3001/api/counselor/mcp",
+          "temperature": 0.2
+        },
+        "position": { "x": 940, "y": 200 }
+      },
+      {
+        "id": "node_riasec_knowledge",
+        "type": "vectorStoreComponent",
+        "data": {
+          "name": "HollandRIASECKnowledgeBase",
+          "description": "Pustaka 6 dimensi minat Holland (Realistic, Investigative, Artistic, Social, Enterprising, Conventional) & pemetaan prodi PT/Vokasi.",
+          "dimensions": ["R", "I", "A", "S", "E", "C"]
+        },
+        "position": { "x": 940, "y": 420 }
+      },
+      {
+        "id": "node_counseling_brief_output",
+        "type": "customComponent",
+        "data": {
+          "name": "CounselingPrepSheetFormatter",
+          "description": "Menghasilkan lembar ringkas konseling 1 halaman siap pakai bagi Guru BK dengan 3 pertanyaan dialog empatik open-ended.",
+          "output_format": "Markdown / Print-Ready PDF"
+        },
+        "position": { "x": 1260, "y": 200 }
+      }
+    ],
+    "edges": [
+      { "source": "node_input_ingestion", "target": "node_privacy_masker" },
+      { "source": "node_privacy_masker", "target": "node_guardrail_crisis" },
+      { "source": "node_guardrail_crisis", "target": "node_ibm_bob_mcp" },
+      { "source": "node_riasec_knowledge", "target": "node_ibm_bob_mcp" },
+      { "source": "node_ibm_bob_mcp", "target": "node_counseling_brief_output" }
+    ]
+  }
+}

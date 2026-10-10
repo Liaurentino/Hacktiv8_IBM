@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#FAF5FF" stroke="#E9D5FF" stroke-width="2"/>
+  <path d="M50 20L22 44V76C22 78 24 80 26 80H42V58H58V80H74C76 80 78 78 78 76V44L50 20Z" fill="#7C3AED"/>
+  <!-- Chimney -->
+  <rect x="64" y="24" width="7" height="15" fill="#6D28D9"/>
+  <!-- Cozy Window -->
+  <rect x="44" y="38" width="12" height="12" rx="2" fill="#FDE68A"/>
+</svg>

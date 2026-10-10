@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#FEF2F2" stroke="#FECACA" stroke-width="2"/>
+  <!-- Torch Handle -->
+  <polygon points="46,54 54,54 58,80 42,80" fill="#94A3B8" stroke="#475569" stroke-width="2"/>
+  <rect x="42" y="48" width="16" height="6" rx="2" fill="#D97706"/>
+  <!-- Olympic Flame -->
+  <path d="M50 20C42 26 40 34 46 40C44 34 48 30 50 28C52 32 54 36 50 42C58 40 60 30 50 20Z" fill="#EF4444"/>
+  <path d="M50 28C46 32 46 38 50 42C54 40 54 34 50 28Z" fill="#F59E0B"/>
+</svg>

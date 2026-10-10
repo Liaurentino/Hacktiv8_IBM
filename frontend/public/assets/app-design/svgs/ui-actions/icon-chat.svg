@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#EDE8FE" stroke="#DDD6FE" stroke-width="2"/>
+  <path d="M74 48C74 60 62 70 50 70C46 70 42 69 38 67L24 74L28 61C24 57 22 53 22 48C22 36 34 26 50 26C66 26 74 36 74 48Z" fill="#6366F1"/>
+  <!-- Chat Dots -->
+  <circle cx="38" cy="48" r="4" fill="#FFFFFF"/>
+  <circle cx="50" cy="48" r="4" fill="#FFFFFF"/>
+  <circle cx="62" cy="48" r="4" fill="#FFFFFF"/>
+</svg>

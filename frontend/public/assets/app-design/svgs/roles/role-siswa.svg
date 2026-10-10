@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="2"/>
+  <!-- Head -->
+  <circle cx="50" cy="38" r="15" fill="#3730A3"/>
+  <!-- Cheerful hair -->
+  <path d="M35 34C35 24 43 18 50 18C57 18 65 24 65 34C62 30 57 32 50 30C43 32 38 30 35 34Z" fill="#1E1B4B"/>
+  <!-- Shoulders with School Tie -->
+  <path d="M26 78C26 64 36 58 50 58C64 58 74 64 74 78" fill="#3730A3"/>
+  <polygon points="50,60 53,70 50,78 47,70" fill="#FCD34D"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Curved tail -->
+  <path d="M20 78C35 68 55 52 70 30" stroke="url(#trail_grad)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M26 84C40 74 60 58 74 36" stroke="url(#trail_grad2)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Golden Star -->
+  <polygon points="72,16 76,27 88,29 79,37 81,49 71,43 61,49 63,37 54,29 66,27" fill="#FCD34D" stroke="#F59E0B" stroke-width="1.5"/>
+  <circle cx="71" cy="33" r="3" fill="#FFFBEB"/>
+  <defs>
+    <linearGradient id="trail_grad" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#C4B5FD" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+    <linearGradient id="trail_grad2" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#A78BFA" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#FAF5FF" stroke="#E9D5FF" stroke-width="2"/>
+  <circle cx="50" cy="38" r="15" fill="#5B21B6"/>
+  <path d="M26 78C26 64 36 58 50 58C64 58 74 64 74 78" fill="#5B21B6"/>
+  <!-- Heart pin for empathy -->
+  <path d="M50 68L48 66C44 62 42 60 42 58C42 56 44 54 46 54C47.5 54 49 55 50 56C51 55 52.5 54 54 54C56 54 58 56 58 58C58 60 56 62 52 66L50 68Z" fill="#F43F5E"/>
+</svg>

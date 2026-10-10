@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUNA High-Quality Asset & Icon Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --luna-navy: #2B2D5B;
+      --luna-indigo: #3D3F7A;
+      --luna-purple: #7C69EF;
+      --luna-lavender: #A9A8F5;
+      --luna-lavender-lt: #ECE9FD;
+      --luna-bg: #F8FAFD;
+      --luna-card: #FFFFFF;
+      --luna-border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--luna-bg);
+      color: var(--luna-navy);
+      padding: 40px 24px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F5F3FF 100%);
+      padding: 36px 32px;
+      border-radius: 24px;
+      border: 1px solid var(--luna-border);
+      box-shadow: 0 10px 30px -10px rgba(43, 45, 91, 0.08);
+      margin-bottom: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--luna-lavender-lt);
+      color: var(--luna-purple);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      width: fit-content;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--luna-navy);
+    }
+    p.lead {
+      font-size: 15px;
+      color: #64748B;
+      max-width: 780px;
+    }
+    .res-selector {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .res-btn {
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--luna-navy);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .res-btn.active {
+      background: var(--luna-navy);
+      color: #FFFFFF;
+      border-color: var(--luna-navy);
+      box-shadow: 0 4px 12px rgba(43, 45, 91, 0.2);
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin: 36px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid var(--luna-lavender-lt);
+      padding-bottom: 8px;
+    }
+    .section-title span {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--luna-purple);
+      background: var(--luna-lavender-lt);
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .icon-card {
+      background: var(--luna-card);
+      border: 1px solid var(--luna-border);
+      border-radius: 18px;
+      padding: 20px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    .icon-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -6px rgba(43, 45, 91, 0.12);
+      border-color: var(--luna-lavender);
+    }
+    .icon-wrapper {
+      width: 96px;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      background: #FAF9FF;
+      background-image: 
+        linear-gradient(45deg, #F1F5F9 25%, transparent 25%), 
+        linear-gradient(-45deg, #F1F5F9 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #F1F5F9 75%), 
+        linear-gradient(-45deg, transparent 75%, #F1F5F9 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+      border-radius: 16px;
+      padding: 10px;
+    }
+    .icon-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
+    }
+    .icon-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--luna-navy);
+      word-break: break-word;
+      line-height: 1.3;
+    }
+    .icon-meta {
+      font-size: 11px;
+      color: #94A3B8;
+      margin-top: 4px;
+    }
+    .copy-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1E1B4B;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    .copy-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 13px;
+      color: #94A3B8;
+      border-top: 1px solid var(--luna-border);
+      padding-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge-pill">✨ LUNA High-Quality Asset &amp; Icon Library · IBM Watsonx AI Edition</div>
+      <h1>Pustaka Ikon &amp; Aset Resmi LUNA (Vektor &amp; PNG High-Quality)</h1>
+      <p class="lead">
+        Seluruh ikon LUNA dirender dari sumber vektor murni (*crisp geometric precision*) dengan transparansi alpha murni (RGBA), tanpa artifak cropping atau resolusi pecah.
+      </p>
+      <div class="res-selector">
+        <button class="res-btn active" onclick="switchResolution('512x512', this)">Master HD (512×512)</button>
+        <button class="res-btn" onclick="switchResolution('256x256', this)">Retina @2x (256×256)</button>
+        <button class="res-btn" onclick="switchResolution('64x64', this)">UI Icon @1x (64×64)</button>
+      </div>
+    </header>
+
+    
+      <div class="section-title">
+        <span>6 Ikon</span>
+        Identitas Brand & Logo
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('brand/luna-app-icon.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="brand" data-file="luna-app-icon.png" src="512x512/brand/luna-app-icon.png" alt="luna-app-icon">
+          </div>
+          <div class="icon-name">luna-app-icon</div>
+          <div class="icon-meta">brand/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('brand/luna-brand-crest.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="brand" data-file="luna-brand-crest.png" src="512x512/brand/luna-brand-crest.png" alt="luna-brand-crest">
+          </div>
+          <div class="icon-name">luna-brand-crest</div>
+          <div class="icon-meta">brand/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('brand/luna-brand-emblem.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="brand" data-file="luna-brand-emblem.png" src="512x512/brand/luna-brand-emblem.png" alt="luna-brand-emblem">
+          </div>
+          <div class="icon-name">luna-brand-emblem</div>
+          <div class="icon-meta">brand/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('brand/luna-moon.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="brand" data-file="luna-moon.png" src="512x512/brand/luna-moon.png" alt="luna-moon">
+          </div>
+          <div class="icon-name">luna-moon</div>
+          <div class="icon-meta">brand/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('brand/luna-sparkle.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="brand" data-file="luna-sparkle.png" src="512x512/brand/luna-sparkle.png" alt="luna-sparkle">
+          </div>
+          <div class="icon-name">luna-sparkle</div>
+          <div class="icon-meta">brand/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('brand/workflow-data-to-human.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="brand" data-file="workflow-data-to-human.png" src="512x512/brand/workflow-data-to-human.png" alt="workflow-data-to-human">
+          </div>
+          <div class="icon-name">workflow-data-to-human</div>
+          <div class="icon-meta">brand/</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>4 Ikon</span>
+        4 Pilar Fitur & Cloud Badges
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('feature-clouds/badge-cloud-curhat.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="feature-clouds" data-file="badge-cloud-curhat.png" src="512x512/feature-clouds/badge-cloud-curhat.png" alt="badge-cloud-curhat">
+          </div>
+          <div class="icon-name">badge-cloud-curhat</div>
+          <div class="icon-meta">feature-clouds/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('feature-clouds/badge-cloud-masadepan.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="feature-clouds" data-file="badge-cloud-masadepan.png" src="512x512/feature-clouds/badge-cloud-masadepan.png" alt="badge-cloud-masadepan">
+          </div>
+          <div class="icon-name">badge-cloud-masadepan</div>
+          <div class="icon-meta">feature-clouds/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('feature-clouds/badge-cloud-perkembangan.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="feature-clouds" data-file="badge-cloud-perkembangan.png" src="512x512/feature-clouds/badge-cloud-perkembangan.png" alt="badge-cloud-perkembangan">
+          </div>
+          <div class="icon-name">badge-cloud-perkembangan</div>
+          <div class="icon-meta">feature-clouds/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('feature-clouds/badge-cloud-profesional.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="feature-clouds" data-file="badge-cloud-profesional.png" src="512x512/feature-clouds/badge-cloud-profesional.png" alt="badge-cloud-profesional">
+          </div>
+          <div class="icon-name">badge-cloud-profesional</div>
+          <div class="icon-meta">feature-clouds/</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>1 Ikon</span>
+        Fitur Utama & Watsonx AI
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('features/ai-watsonx.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="features" data-file="ai-watsonx.png" src="512x512/features/ai-watsonx.png" alt="ai-watsonx">
+          </div>
+          <div class="icon-name">ai-watsonx</div>
+          <div class="icon-meta">features/</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>15 Ikon</span>
+        11 Mata Pelajaran & Karir
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('subjects/icon-career-flask.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="icon-career-flask.png" src="512x512/subjects/icon-career-flask.png" alt="icon-career-flask">
+          </div>
+          <div class="icon-name">icon-career-flask</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/icon-career-gradcap.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="icon-career-gradcap.png" src="512x512/subjects/icon-career-gradcap.png" alt="icon-career-gradcap">
+          </div>
+          <div class="icon-name">icon-career-gradcap</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/icon-career-lightbulb.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="icon-career-lightbulb.png" src="512x512/subjects/icon-career-lightbulb.png" alt="icon-career-lightbulb">
+          </div>
+          <div class="icon-name">icon-career-lightbulb</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/icon-nav-riasec-bars.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="icon-nav-riasec-bars.png" src="512x512/subjects/icon-nav-riasec-bars.png" alt="icon-nav-riasec-bars">
+          </div>
+          <div class="icon-name">icon-nav-riasec-bars</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-bindo.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-bindo.png" src="512x512/subjects/mapel-bindo.png" alt="mapel-bindo">
+          </div>
+          <div class="icon-name">mapel-bindo</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-bing.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-bing.png" src="512x512/subjects/mapel-bing.png" alt="mapel-bing">
+          </div>
+          <div class="icon-name">mapel-bing</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-biologi.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-biologi.png" src="512x512/subjects/mapel-biologi.png" alt="mapel-biologi">
+          </div>
+          <div class="icon-name">mapel-biologi</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-ekonomi.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-ekonomi.png" src="512x512/subjects/mapel-ekonomi.png" alt="mapel-ekonomi">
+          </div>
+          <div class="icon-name">mapel-ekonomi</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-fisika.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-fisika.png" src="512x512/subjects/mapel-fisika.png" alt="mapel-fisika">
+          </div>
+          <div class="icon-name">mapel-fisika</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-geografi.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-geografi.png" src="512x512/subjects/mapel-geografi.png" alt="mapel-geografi">
+          </div>
+          <div class="icon-name">mapel-geografi</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-kimia.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-kimia.png" src="512x512/subjects/mapel-kimia.png" alt="mapel-kimia">
+          </div>
+          <div class="icon-name">mapel-kimia</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-mtk.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-mtk.png" src="512x512/subjects/mapel-mtk.png" alt="mapel-mtk">
+          </div>
+          <div class="icon-name">mapel-mtk</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-olahraga.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-olahraga.png" src="512x512/subjects/mapel-olahraga.png" alt="mapel-olahraga">
+          </div>
+          <div class="icon-name">mapel-olahraga</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-seni.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-seni.png" src="512x512/subjects/mapel-seni.png" alt="mapel-seni">
+          </div>
+          <div class="icon-name">mapel-seni</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('subjects/mapel-sosiologi.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="subjects" data-file="mapel-sosiologi.png" src="512x512/subjects/mapel-sosiologi.png" alt="mapel-sosiologi">
+          </div>
+          <div class="icon-name">mapel-sosiologi</div>
+          <div class="icon-meta">subjects/</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>18 Ikon</span>
+        Navigasi & Aksi UI
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('ui-actions/action-calendar.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="action-calendar.png" src="512x512/ui-actions/action-calendar.png" alt="action-calendar">
+          </div>
+          <div class="icon-name">action-calendar</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/action-favorite.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="action-favorite.png" src="512x512/ui-actions/action-favorite.png" alt="action-favorite">
+          </div>
+          <div class="icon-name">action-favorite</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/action-notification.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="action-notification.png" src="512x512/ui-actions/action-notification.png" alt="action-notification">
+          </div>
+          <div class="icon-name">action-notification</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/action-profile.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="action-profile.png" src="512x512/ui-actions/action-profile.png" alt="action-profile">
+          </div>
+          <div class="icon-name">action-profile</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/action-search.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="action-search.png" src="512x512/ui-actions/action-search.png" alt="action-search">
+          </div>
+          <div class="icon-name">action-search</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/action-send.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="action-send.png" src="512x512/ui-actions/action-send.png" alt="action-send">
+          </div>
+          <div class="icon-name">action-send</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/action-settings.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="action-settings.png" src="512x512/ui-actions/action-settings.png" alt="action-settings">
+          </div>
+          <div class="icon-name">action-settings</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/action-trend.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="action-trend.png" src="512x512/ui-actions/action-trend.png" alt="action-trend">
+          </div>
+          <div class="icon-name">action-trend</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/btn-hamburger.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="btn-hamburger.png" src="512x512/ui-actions/btn-hamburger.png" alt="btn-hamburger">
+          </div>
+          <div class="icon-name">btn-hamburger</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/btn-kembali.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="btn-kembali.png" src="512x512/ui-actions/btn-kembali.png" alt="btn-kembali">
+          </div>
+          <div class="icon-name">btn-kembali</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/btn-lanjut.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="btn-lanjut.png" src="512x512/ui-actions/btn-lanjut.png" alt="btn-lanjut">
+          </div>
+          <div class="icon-name">btn-lanjut</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/btn-selesai.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="btn-selesai.png" src="512x512/ui-actions/btn-selesai.png" alt="btn-selesai">
+          </div>
+          <div class="icon-name">btn-selesai</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/btn-tambah.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="btn-tambah.png" src="512x512/ui-actions/btn-tambah.png" alt="btn-tambah">
+          </div>
+          <div class="icon-name">btn-tambah</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/icon-chat-security.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="icon-chat-security.png" src="512x512/ui-actions/icon-chat-security.png" alt="icon-chat-security">
+          </div>
+          <div class="icon-name">icon-chat-security</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/icon-chat.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="icon-chat.png" src="512x512/ui-actions/icon-chat.png" alt="icon-chat">
+          </div>
+          <div class="icon-name">icon-chat</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/icon-dokumen.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="icon-dokumen.png" src="512x512/ui-actions/icon-dokumen.png" alt="icon-dokumen">
+          </div>
+          <div class="icon-name">icon-dokumen</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/icon-home.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="icon-home.png" src="512x512/ui-actions/icon-home.png" alt="icon-home">
+          </div>
+          <div class="icon-name">icon-home</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('ui-actions/sidebar-logout.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="ui-actions" data-file="sidebar-logout.png" src="512x512/ui-actions/sidebar-logout.png" alt="sidebar-logout">
+          </div>
+          <div class="icon-name">sidebar-logout</div>
+          <div class="icon-meta">ui-actions/</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>10 Ikon</span>
+        Indikator Status & Predikat Nilai
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('badges/badge-grade-a.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="badge-grade-a.png" src="512x512/badges/badge-grade-a.png" alt="badge-grade-a">
+          </div>
+          <div class="icon-name">badge-grade-a</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/badge-grade-b.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="badge-grade-b.png" src="512x512/badges/badge-grade-b.png" alt="badge-grade-b">
+          </div>
+          <div class="icon-name">badge-grade-b</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/badge-grade-c.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="badge-grade-c.png" src="512x512/badges/badge-grade-c.png" alt="badge-grade-c">
+          </div>
+          <div class="icon-name">badge-grade-c</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/badge-grade-d.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="badge-grade-d.png" src="512x512/badges/badge-grade-d.png" alt="badge-grade-d">
+          </div>
+          <div class="icon-name">badge-grade-d</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/badge-grade-e.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="badge-grade-e.png" src="512x512/badges/badge-grade-e.png" alt="badge-grade-e">
+          </div>
+          <div class="icon-name">badge-grade-e</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/badge-grade-x.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="badge-grade-x.png" src="512x512/badges/badge-grade-x.png" alt="badge-grade-x">
+          </div>
+          <div class="icon-name">badge-grade-x</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/icon-stat-chart-amber.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="icon-stat-chart-amber.png" src="512x512/badges/icon-stat-chart-amber.png" alt="icon-stat-chart-amber">
+          </div>
+          <div class="icon-name">icon-stat-chart-amber</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/icon-stat-check-green.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="icon-stat-check-green.png" src="512x512/badges/icon-stat-check-green.png" alt="icon-stat-check-green">
+          </div>
+          <div class="icon-name">icon-stat-check-green</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/icon-stat-doc-peach.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="icon-stat-doc-peach.png" src="512x512/badges/icon-stat-doc-peach.png" alt="icon-stat-doc-peach">
+          </div>
+          <div class="icon-name">icon-stat-doc-peach</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('badges/icon-stat-hourglass-amber.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="badges" data-file="icon-stat-hourglass-amber.png" src="512x512/badges/icon-stat-hourglass-amber.png" alt="icon-stat-hourglass-amber">
+          </div>
+          <div class="icon-name">icon-stat-hourglass-amber</div>
+          <div class="icon-meta">badges/</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>9 Ikon</span>
+        Ornamen & Dekorasi Ilustrasi
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('decorations/aksesoris-kucing-di-buku.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="aksesoris-kucing-di-buku.png" src="512x512/decorations/aksesoris-kucing-di-buku.png" alt="aksesoris-kucing-di-buku">
+          </div>
+          <div class="icon-name">aksesoris-kucing-di-buku</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('decorations/aksesoris-tempat-pensil.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="aksesoris-tempat-pensil.png" src="512x512/decorations/aksesoris-tempat-pensil.png" alt="aksesoris-tempat-pensil">
+          </div>
+          <div class="icon-name">aksesoris-tempat-pensil</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('decorations/dekor-bintang-jatuh.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="dekor-bintang-jatuh.png" src="512x512/decorations/dekor-bintang-jatuh.png" alt="dekor-bintang-jatuh">
+          </div>
+          <div class="icon-name">dekor-bintang-jatuh</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('decorations/dekor-bunga-lavender.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="dekor-bunga-lavender.png" src="512x512/decorations/dekor-bunga-lavender.png" alt="dekor-bunga-lavender">
+          </div>
+          <div class="icon-name">dekor-bunga-lavender</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('decorations/dekor-pita-hias.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="dekor-pita-hias.png" src="512x512/decorations/dekor-pita-hias.png" alt="dekor-pita-hias">
+          </div>
+          <div class="icon-name">dekor-pita-hias</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('decorations/ornamen-awan-lilac.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="ornamen-awan-lilac.png" src="512x512/decorations/ornamen-awan-lilac.png" alt="ornamen-awan-lilac">
+          </div>
+          <div class="icon-name">ornamen-awan-lilac</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('decorations/ornamen-bintang-cluster-1.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="ornamen-bintang-cluster-1.png" src="512x512/decorations/ornamen-bintang-cluster-1.png" alt="ornamen-bintang-cluster-1">
+          </div>
+          <div class="icon-name">ornamen-bintang-cluster-1</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('decorations/ornamen-bintang-cluster-2.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="ornamen-bintang-cluster-2.png" src="512x512/decorations/ornamen-bintang-cluster-2.png" alt="ornamen-bintang-cluster-2">
+          </div>
+          <div class="icon-name">ornamen-bintang-cluster-2</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('decorations/ornamen-hati.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="decorations" data-file="ornamen-hati.png" src="512x512/decorations/ornamen-hati.png" alt="ornamen-hati">
+          </div>
+          <div class="icon-name">ornamen-hati</div>
+          <div class="icon-meta">decorations/</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>3 Ikon</span>
+        Peran Pengguna (Siswa, Guru, Guru BK)
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('roles/role-guru-bk.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="roles" data-file="role-guru-bk.png" src="512x512/roles/role-guru-bk.png" alt="role-guru-bk">
+          </div>
+          <div class="icon-name">role-guru-bk</div>
+          <div class="icon-meta">roles/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('roles/role-guru.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="roles" data-file="role-guru.png" src="512x512/roles/role-guru.png" alt="role-guru">
+          </div>
+          <div class="icon-name">role-guru</div>
+          <div class="icon-meta">roles/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('roles/role-siswa.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="roles" data-file="role-siswa.png" src="512x512/roles/role-siswa.png" alt="role-siswa">
+          </div>
+          <div class="icon-name">role-siswa</div>
+          <div class="icon-meta">roles/</div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>4 Ikon</span>
+        Triase Konseling BK
+      </div>
+      <div class="grid">
+        
+        <div class="icon-card" onclick="copyPath('triage-flags/flag-black.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="triage-flags" data-file="flag-black.png" src="512x512/triage-flags/flag-black.png" alt="flag-black">
+          </div>
+          <div class="icon-name">flag-black</div>
+          <div class="icon-meta">triage-flags/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('triage-flags/flag-green.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="triage-flags" data-file="flag-green.png" src="512x512/triage-flags/flag-green.png" alt="flag-green">
+          </div>
+          <div class="icon-name">flag-green</div>
+          <div class="icon-meta">triage-flags/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('triage-flags/flag-red.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="triage-flags" data-file="flag-red.png" src="512x512/triage-flags/flag-red.png" alt="flag-red">
+          </div>
+          <div class="icon-name">flag-red</div>
+          <div class="icon-meta">triage-flags/</div>
+        </div>
+        <div class="icon-card" onclick="copyPath('triage-flags/flag-yellow.png')" title="Klik untuk menyalin path file">
+          <div class="icon-wrapper">
+            <img class="icon-img" data-cat="triage-flags" data-file="flag-yellow.png" src="512x512/triage-flags/flag-yellow.png" alt="flag-yellow">
+          </div>
+          <div class="icon-name">flag-yellow</div>
+          <div class="icon-meta">triage-flags/</div>
+        </div>
+      </div>
+
+
+    <footer>
+      LUNA (Lentera untuk Nilai dan Asa) · Hackathon IBM 2026 · Solusi Konseling Sekolah &amp; Early Warning System
+    </footer>
+  </div>
+
+  <div id="toast" class="copy-toast">Path file berhasil disalin!</div>
+
+  <script>
+    function switchResolution(res, btn) {
+      document.querySelectorAll('.res-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.icon-img').forEach(img => {
+        const cat = img.getAttribute('data-cat');
+        const file = img.getAttribute('data-file');
+        img.src = res + '/' + cat + '/' + file;
+      });
+    }
+
+    function copyPath(relPath) {
+      navigator.clipboard.writeText(relPath).then(() => {
+        const toast = document.getElementById('toast');
+        toast.innerText = 'Disalin: ' + relPath;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2"/>
+  <!-- Bars -->
+  <rect x="26" y="52" width="9" height="24" rx="3" fill="#93C5FD"/>
+  <rect x="39" y="44" width="9" height="32" rx="3" fill="#60A5FA"/>
+  <rect x="52" y="34" width="9" height="42" rx="3" fill="#3B82F6"/>
+  <rect x="65" y="24" width="9" height="52" rx="3" fill="#1D4ED8"/>
+  <!-- Trend Arrow -->
+  <path d="M28 46L44 38L56 28L72 18M72 18H62M72 18V28" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

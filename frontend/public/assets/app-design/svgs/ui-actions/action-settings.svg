@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+  <!-- Large Cog -->
+  <g fill="#475569">
+    <circle cx="46" cy="46" r="18"/>
+    <path d="M43 23H49V29H43ZM43 63H49V69H43ZM23 43H29V49H23ZM63 43H69V49H63ZM29 32L34 27L38 31L33 36ZM54 57L59 52L63 56L58 61ZM54 35L59 40L63 36L58 31ZM29 60L34 65L38 61L33 56Z"/>
+  </g>
+  <circle cx="46" cy="46" r="8" fill="#F8FAFC"/>
+  <!-- Small Cog Accent -->
+  <circle cx="68" cy="68" r="11" fill="#6366F1"/>
+  <circle cx="68" cy="68" r="4" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 60" fill="none">
+  <!-- Step 1: Data -->
+  <circle cx="25" cy="30" r="18" fill="#EEF2FF" stroke="#6366F1" stroke-width="2"/>
+  <rect x="18" y="24" width="4" height="12" rx="1" fill="#4F46E5"/>
+  <rect x="23" y="20" width="4" height="16" rx="1" fill="#6366F1"/>
+  <rect x="28" y="27" width="4" height="9" rx="1" fill="#818CF8"/>
+  <!-- Arrow 1 -->
+  <path d="M48 30H56M56 30L52 26M56 30L52 34" stroke="#A5B4FC" stroke-width="2" stroke-linecap="round"/>
+  <!-- Step 2: Watsonx AI -->
+  <circle cx="70" cy="30" r="18" fill="#EDE8FE" stroke="#7C3AED" stroke-width="2"/>
+  <circle cx="70" cy="30" r="7" fill="#8B5CF6"/>
+  <circle cx="65" cy="23" r="2.5" fill="#A78BFA"/>
+  <circle cx="75" cy="23" r="2.5" fill="#A78BFA"/>
+  <circle cx="70" cy="37" r="2.5" fill="#A78BFA"/>
+  <!-- Arrow 2 -->
+  <path d="M93 30H101M101 30L97 26M101 30L97 34" stroke="#A5B4FC" stroke-width="2" stroke-linecap="round"/>
+  <!-- Step 3: Human BK -->
+  <circle cx="115" cy="30" r="18" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M115 37L112.5 34.5C107 29.5 103 26 103 22C103 18.5 106 16 109.5 16C111.5 16 113.5 17 115 18.5C116.5 17 118.5 16 120.5 16C124 16 127 18.5 127 22C127 26 123 29.5 117.5 34.5L115 37Z" fill="#DC2626"/>
+</svg>

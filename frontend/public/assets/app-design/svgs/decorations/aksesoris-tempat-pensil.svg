@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Ceramic Cup -->
+  <rect x="34" y="44" width="32" height="42" rx="6" fill="#EDE8FE" stroke="#A78BFA" stroke-width="2.5"/>
+  <!-- Cute face on cup -->
+  <circle cx="45" cy="62" r="2" fill="#4338CA"/>
+  <circle cx="55" cy="62" r="2" fill="#4338CA"/>
+  <path d="M48 66Q50 68 52 66" stroke="#4338CA" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Wooden Ruler -->
+  <rect x="36" y="22" width="7" height="30" rx="1.5" fill="#FDE68A" stroke="#D97706" stroke-width="1.2"/>
+  <line x1="36" y1="26" x2="39" y2="26" stroke="#B45309" stroke-width="1"/>
+  <line x1="36" y1="30" x2="40" y2="30" stroke="#B45309" stroke-width="1"/>
+  <!-- Yellow Pencil with Eraser -->
+  <polygon points="46,14 49,18 43,18" fill="#F59E0B"/>
+  <rect x="43" y="18" width="6" height="30" fill="#FBBF24"/>
+  <!-- Blue Pen -->
+  <rect x="53" y="24" width="6" height="26" rx="2" fill="#3B82F6"/>
+  <!-- Scissors handle -->
+  <circle cx="62" cy="22" r="4" fill="none" stroke="#EC4899" stroke-width="2"/>
+</svg>

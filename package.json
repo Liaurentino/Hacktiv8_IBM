@@ -1,0 +1,18 @@
+{
+  "name": "luna-app",
+  "version": "2.0.0",
+  "private": true,
+  "description": "LUNA (Lentera untuk Nilai dan Asa) - Sistem Asisten Guru BK & Deteksi Dini Kerentanan Siswa Berbasis LUNA AI Agent & FastMCP",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "node backend/server.js",
+    "backend": "node backend/server.js",
+    "client": "npm run dev --prefix frontend",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  }
+}

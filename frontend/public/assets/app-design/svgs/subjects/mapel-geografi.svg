@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="2"/>
+  <!-- Globe Ball -->
+  <circle cx="48" cy="46" r="22" fill="#0284C7"/>
+  <!-- Continents -->
+  <path d="M38 36C42 34 46 38 48 42C44 46 38 48 34 44C32 40 34 38 38 36Z" fill="#16A34A"/>
+  <path d="M52 40C58 40 62 46 60 52C54 54 50 50 52 40Z" fill="#16A34A"/>
+  <path d="M40 56C46 54 52 60 48 64C42 66 38 60 40 56Z" fill="#16A34A"/>
+  <!-- Meridian & Stand -->
+  <path d="M48 20C62 20 74 32 74 46C74 60 62 72 48 72" stroke="#D97706" stroke-width="3" fill="none"/>
+  <line x1="48" y1="72" x2="48" y2="82" stroke="#D97706" stroke-width="4"/>
+  <rect x="36" y="80" width="24" height="5" rx="2.5" fill="#B45309"/>
+</svg>

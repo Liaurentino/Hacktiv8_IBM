@@ -1,0 +1,38 @@
+body:has(.student-shell) { background: #F3F3FD; color: #1E1B4B; }
+.student-shell .settings-wrapper { max-width: 900px; }
+.student-shell .settings-nav {
+  gap: 8px;
+  border-bottom: 1px solid #EAE6FA !important;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.student-shell .settings-tab-btn {
+  flex: 0 0 auto;
+  padding: 10px 16px !important;
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  margin-bottom: -1px;
+  color: #777493 !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  transition: color .15s ease, border-color .15s ease;
+}
+.student-shell .settings-tab-btn.active {
+  color: #5243C2 !important;
+  border-bottom-color: #8B7EF4 !important;
+  font-weight: 700 !important;
+}
+.student-shell .settings-tab-btn:hover { color: #5243C2 !important; }
+
+@media (max-width: 640px) {
+  .student-shell .settings-wrapper { gap: 14px !important; }
+  .student-shell .settings-wrapper > .page-header { align-items: stretch !important; }
+  .student-shell .settings-wrapper > .page-header h1 { font-size: 21px !important; }
+  .student-shell .settings-wrapper > .page-header > button { align-self: flex-start; }
+  .student-shell .settings-nav { margin: 0 -2px 8px; }
+  .student-shell .settings-tab-btn { padding: 10px 12px !important; font-size: 12.5px !important; }
+  .student-shell .settings-wrapper form.card { padding: 18px !important; gap: 18px !important; }
+  .student-shell .settings-wrapper form.card > div:last-child { flex-wrap: wrap; }
+  .student-shell .settings-wrapper form.card > div:last-child > button { width: 100%; justify-content: center; }
+}

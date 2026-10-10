@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="44" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2"/>
+  <!-- Primary Chat Bubble -->
+  <path d="M22 42C22 32 32 24 44 24C56 24 66 32 66 42C66 52 56 60 44 60C40 60 36 59 33 57L22 62L25 51C23 48 22 45 22 42Z" fill="#2563EB"/>
+  <!-- Secondary Bubble -->
+  <path d="M52 50C52 46 56 42 62 42C68 42 74 46 74 50C74 54 70 58 64 58C62 58 60 57.5 58 56.5L52 59L53.5 53.5C52.5 52.5 52 51.2 52 50Z" fill="#38BDF8"/>
+  <text x="36" y="46" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">EN</text>
+</svg>

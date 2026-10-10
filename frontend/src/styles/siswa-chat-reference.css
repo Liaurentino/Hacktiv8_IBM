@@ -1,0 +1,27 @@
+/* Override container styling specifically for modern LUNA chat layout */
+.student-shell:has(.luna-chat-shell) .unified-main-content,
+.guru-shell:has(.luna-chat-shell) .unified-main-content,
+.student-shell:has(.luna-chat-shell) .main,
+.guru-shell:has(.luna-chat-shell) .main {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #FFFFFF !important;
+  overflow: hidden !important;
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.student-shell:has(.luna-chat-shell),
+.guru-shell:has(.luna-chat-shell) {
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  .student-shell:has(.luna-chat-shell) .student-workspace .main {
+    padding-bottom: 56px !important;
+  }
+}
