@@ -34,13 +34,14 @@ build/
 frontend/dist/
 *.local
 
-# 4. Berkas Database Lokal & SQLite Cache
+# 4. Berkas Database Lokal & Port Cache
 *.db
 *.db-journal
 *.sqlite
 *.sqlite3
 backend/data/*.db
 data/*.db
+*active_port.json
 
 # 5. Berkas Log & Debugging
 logs/
