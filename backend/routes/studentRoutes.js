@@ -8,7 +8,8 @@ import {
   updateStudent,
   deleteStudent,
   getMyProfile,
-  getStudentMe
+  getStudentMe,
+  resetStudentPassword
 } from '../controllers/studentController.js';
 
 import { authenticateToken, optionalAuth } from '../middleware/authMiddleware.js';
@@ -23,6 +24,7 @@ router.get('/:id', optionalAuth, getStudentById);
 router.post('/', createStudent);
 router.post('/batch', batchCreateStudents);
 router.put('/:id', updateStudent);
+router.post('/:id/reset-password', resetStudentPassword);
 router.delete('/:id', deleteStudent);
 
 export default router;

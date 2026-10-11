@@ -106,11 +106,17 @@ export const api = {
     return data;
   },
 
-  async register(name, email, password, role = 'siswa') {
+  async register(dataOrName, email, password, role = 'guru_bk', extra = {}) {
+    let payload;
+    if (typeof dataOrName === 'object' && dataOrName !== null) {
+      payload = dataOrName;
+    } else {
+      payload = { name: dataOrName, email, password, role, ...extra };
+    }
     const res = await request('/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, password, role })
+      body: JSON.stringify(payload)
     });
     const data = await res.json();
     if (res.ok && data.token) {
@@ -254,6 +260,14 @@ export const api = {
       method: 'PUT',
       headers: getHeaders(),
       body: JSON.stringify(studentData)
+    });
+    return res.json();
+  },
+
+  async resetStudentPassword(id) {
+    const res = await request(`/students/${id}/reset-password`, {
+      method: 'POST',
+      headers: getHeaders()
     });
     return res.json();
   },

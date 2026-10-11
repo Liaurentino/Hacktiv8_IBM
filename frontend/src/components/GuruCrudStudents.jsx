@@ -9,12 +9,14 @@ import {
   Users,
   School,
   Mail,
-  Phone
+  Phone,
+  KeyRound
 } from 'lucide-react';
 import api from '../services/api';
 import GuruBuatAkunSiswa from './GuruBuatAkunSiswa';
 import EditStudentModal from './EditStudentModal';
 import DeleteStudentModal from './DeleteStudentModal';
+import ResetPasswordModal from './ResetPasswordModal';
 import PageHeader from './common/PageHeader';
 
 // Halaman Kelola Akun Siswa — murni manajemen akun login siswa (tanpa nilai / data BK).
@@ -27,6 +29,7 @@ export default function GuruCrudStudents() {
 
   const [studentToEdit, setStudentToEdit] = useState(null);
   const [studentToDelete, setStudentToDelete] = useState(null);
+  const [studentToResetPassword, setStudentToResetPassword] = useState(null);
   const [alertBanner, setAlertBanner] = useState(null);
 
   const fetchStudents = async () => {
@@ -233,10 +236,18 @@ export default function GuruCrudStudents() {
                         <button
                           type="button"
                           onClick={() => setStudentToEdit(st)}
-                          title="Edit Akun"
+                          title="Edit Kontak (WA & Gmail)"
                           style={{ background: '#EEF2FF', border: '1px solid #C7D2FE', color: '#4338CA', padding: '6px 8px', borderRadius: '6px', cursor: 'pointer', display: 'flex' }}
                         >
                           <Edit3 size={14} />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setStudentToResetPassword(st)}
+                          title="Reset Password Siswa"
+                          style={{ background: '#FEF3C7', border: '1px solid #FDE68A', color: '#B45309', padding: '6px 8px', borderRadius: '6px', cursor: 'pointer', display: 'flex' }}
+                        >
+                          <KeyRound size={14} />
                         </button>
                         <button
                           type="button"
@@ -260,7 +271,20 @@ export default function GuruCrudStudents() {
         isOpen={!!studentToEdit}
         student={studentToEdit}
         onClose={() => setStudentToEdit(null)}
-        onStudentUpdated={(s) => { fetchStudents(); showBanner('success', `Akun ${s.name} berhasil diperbarui.`); }}
+        onStudentUpdated={(s) => { fetchStudents(); showBanner('success', `Kontak ${s.name} berhasil diperbarui.`); }}
+        onOpenResetPassword={(s) => {
+          setStudentToEdit(null);
+          setStudentToResetPassword(s);
+        }}
+      />
+      <ResetPasswordModal
+        isOpen={!!studentToResetPassword}
+        student={studentToResetPassword}
+        onClose={() => setStudentToResetPassword(null)}
+        onPasswordResetSuccess={(s, pw) => {
+          fetchStudents();
+          showBanner('success', `Password akun ${s.name} berhasil direset: ${pw}`);
+        }}
       />
       <DeleteStudentModal
         isOpen={!!studentToDelete}

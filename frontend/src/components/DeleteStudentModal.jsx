@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Trash2, AlertTriangle } from 'lucide-react';
 import api from '../services/api';
 
@@ -27,9 +28,47 @@ export default function DeleteStudentModal({ isOpen, onClose, student, onStudent
     }
   };
 
-  return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-dialog" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '480px' }}>
+  return createPortal(
+    <div
+      className="modal-overlay"
+      onClick={onClose}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'rgba(15, 23, 42, 0.65)',
+        backdropFilter: 'blur(4px)',
+        WebkitBackdropFilter: 'blur(4px)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: 999999,
+        padding: '16px',
+        margin: 0,
+        boxSizing: 'border-box'
+      }}
+    >
+      <div
+        className="modal-dialog"
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          width: '100%',
+          maxWidth: '480px',
+          maxHeight: '90vh',
+          background: '#FFFFFF',
+          borderRadius: '16px',
+          boxShadow: '0 25px 50px -12px rgba(15, 23, 42, 0.35)',
+          overflow: 'hidden',
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'relative',
+          margin: 'auto'
+        }}
+      >
         {/* Header */}
         <div className="modal-header-luna" style={{ background: '#FFF1F2' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -109,6 +148,7 @@ export default function DeleteStudentModal({ isOpen, onClose, student, onStudent
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

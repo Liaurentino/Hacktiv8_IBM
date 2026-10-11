@@ -84,7 +84,16 @@ export const login = async (req, res) => {
 
 export const register = async (req, res) => {
   try {
-    const { name, email, password, role = 'guru_bk' } = req.body;
+    const {
+      name,
+      email,
+      password,
+      role = 'guru_bk',
+      nisn,
+      className,
+      subjectKey,
+      subjectName
+    } = req.body;
 
     if (!name || !email || !password) {
       return res.status(400).json({
@@ -93,29 +102,59 @@ export const register = async (req, res) => {
       });
     }
 
-    if (role === 'siswa') {
-      return res.status(403).json({
+    if (password.length < 6) {
+      return res.status(400).json({
         status: 'error',
-        message: 'Akun siswa tidak dapat dibuat melalui pendaftaran mandiri. Hubungi Guru BK untuk pembuatan akun.'
+        message: 'Password minimal 6 karakter demi keamanan akun.'
       });
     }
 
-    const existing = await UserModel.findByEmail(email.trim().toLowerCase());
+    const cleanEmail = email.trim().toLowerCase();
+    const existing = await UserModel.findByEmail(cleanEmail);
     if (existing) {
       return res.status(409).json({
         status: 'error',
-        message: 'Email ini sudah terdaftar. Silakan login.'
+        message: 'Email ini sudah terdaftar. Silakan login atau gunakan email lain.'
       });
+    }
+
+    // Tentukan mata pelajaran jika guru mapel
+    let finalSubjectKey = null;
+    let finalSubjectName = null;
+    if (role === 'guru_mapel' || role === 'guru') {
+      finalSubjectKey = subjectKey || 'mtk';
+      finalSubjectName = subjectName || 'Matematika';
     }
 
     const avatar = name.split(' ').map((n) => n[0]).slice(0, 2).join('').toUpperCase();
     const newUser = await UserModel.create({
       name,
-      email: email.trim().toLowerCase(),
+      email: cleanEmail,
       password,
-      role,
-      avatar
+      role: role === 'guru_mapel' ? 'guru_mapel' : role,
+      avatar,
+      subjectKey: finalSubjectKey,
+      subjectName: finalSubjectName
     });
+
+    let studentRecord = null;
+    if (newUser.role === 'siswa') {
+      const generatedNisn = (nisn && nisn.trim()) ? nisn.trim() : `2024${Math.floor(100000 + Math.random() * 900000)}`;
+      const targetClass = className || 'XI IPA 2';
+      studentRecord = await StudentModel.create({
+        userId: newUser.id,
+        nisn: generatedNisn,
+        name: newUser.name,
+        email: newUser.email,
+        className: targetClass,
+        academicScore: 82.5,
+        counselingStatus: 'Normal',
+        triageLevel: 'HIJAU',
+        careerTitle: 'Eksplorasi Karir Mandiri',
+        careerTag: `Eksplorasi Karir — ${newUser.name}`,
+        careerDesc: 'Akun pendaftaran mandiri siswa LUNA LMS.'
+      });
+    }
 
     const token = generateToken(newUser);
     res.status(201).json({
@@ -124,6 +163,9 @@ export const register = async (req, res) => {
       token,
       user: {
         id: newUser.id,
+        student_id: studentRecord?.id || null,
+        nisn: studentRecord?.nisn || null,
+        class_name: studentRecord?.class_name || null,
         name: newUser.name,
         email: newUser.email,
         role: newUser.role,

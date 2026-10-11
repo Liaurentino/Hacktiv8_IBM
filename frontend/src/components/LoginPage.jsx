@@ -176,8 +176,15 @@ export default function LoginPage({ onLoginSuccess, onBackToLanding }) {
           </button>
         </form>
 
+        {/* Info Akun Terdaftar */}
+        <div style={{ textAlign: 'center', marginTop: '20px', paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
+          <p style={{ fontSize: '12px', color: '#64748B', margin: 0, lineHeight: 1.5 }}>
+            Akun siswa dan pendidik didaftarkan secara resmi oleh pihak sekolah. Hubungi <strong>Guru BK</strong> untuk informasi akun Anda.
+          </p>
+        </div>
+
         {onBackToLanding && (
-          <div style={{ textAlign: 'center', marginTop: '24px' }}>
+          <div style={{ textAlign: 'center', marginTop: '16px' }}>
             <button
               type="button"
               onClick={onBackToLanding}

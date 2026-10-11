@@ -119,17 +119,93 @@ export const batchCreateStudents = async (req, res) => {
 export const updateStudent = async (req, res) => {
   try {
     const id = Number(req.params.id);
-    const updated = await StudentModel.update(id, req.body);
+    const { email, phone } = req.body;
+
+    // Strict boundary: Guru BK hanya boleh memperbarui email (Gmail) dan phone (WhatsApp)
+    const updatePayload = {};
+    if (email !== undefined) updatePayload.email = email.trim();
+    if (phone !== undefined) updatePayload.phone = phone.trim();
+
+    const updated = await StudentModel.update(id, updatePayload);
     if (!updated) {
       return res.status(404).json({ status: 'error', message: 'Siswa tidak ditemukan.' });
     }
+
+    // Jika email siswa diupdate, sinkronkan juga ke tabel users agar login memakai email baru
+    if (updatePayload.email) {
+      const cleanEmail = updatePayload.email.toLowerCase();
+      if (updated.user_id) {
+        await UserModel.update(updated.user_id, { email: cleanEmail });
+      } else {
+        const userByOldEmail = await UserModel.findByEmail(updated.email);
+        if (userByOldEmail) {
+          await UserModel.update(userByOldEmail.id, { email: cleanEmail });
+        }
+      }
+    }
+
     res.json({
       status: 'success',
-      message: `Data siswa ${updated.name} berhasil diperbarui di database!`,
+      message: `Kontak siswa ${updated.name} (WhatsApp & Gmail) berhasil diperbarui!`,
       student: updated
     });
   } catch (err) {
     res.status(500).json({ status: 'error', message: err.message });
+  }
+};
+
+export const resetStudentPassword = async (req, res) => {
+  try {
+    const studentId = Number(req.params.id);
+    const student = await StudentModel.getById(studentId);
+    if (!student) {
+      return res.status(404).json({ status: 'error', message: 'Data siswa tidak ditemukan.' });
+    }
+
+    // Buat password sementara (OTP) acak yang mudah dibaca, misal: luna4892
+    const randomSuffix = Math.floor(1000 + Math.random() * 9000);
+    const tempPassword = `luna${randomSuffix}`;
+
+    // Cari user terkait di tabel users
+    let user = null;
+    if (student.user_id) {
+      user = await UserModel.findById(student.user_id);
+    }
+    if (!user && student.email) {
+      user = await UserModel.findByEmail(student.email.trim().toLowerCase());
+    }
+    if (!user && student.nisn) {
+      user = await UserModel.findByEmail(`${student.nisn}@siswa.sch.id`);
+    }
+
+    if (user) {
+      await UserModel.updatePassword(user.id, tempPassword);
+    } else {
+      const userEmail = student.email || `${student.nisn}@siswa.sch.id`;
+      user = await UserModel.create({
+        email: userEmail,
+        password: tempPassword,
+        name: student.name,
+        role: 'siswa'
+      });
+      await StudentModel.update(student.id, { userId: user.id, email: userEmail });
+    }
+
+    res.json({
+      status: 'success',
+      message: `Password sementara untuk ${student.name} berhasil dibuat!`,
+      tempPassword,
+      student: {
+        id: student.id,
+        name: student.name,
+        nisn: student.nisn,
+        email: student.email || user?.email,
+        phone: student.phone,
+        className: student.class_name
+      }
+    });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: 'Gagal mereset password: ' + err.message });
   }
 };
 

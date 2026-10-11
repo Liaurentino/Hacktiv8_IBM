@@ -39,6 +39,7 @@ export default function AppRoutes() {
       {/* Public / Landing Route */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPageView />} />
+      <Route path="/register" element={<Navigate to="/login" replace />} />
 
       {/* Portal Guru (BK & Mapel) Routes */}
       <Route path="/guru" element={<GuruLayout />}>
